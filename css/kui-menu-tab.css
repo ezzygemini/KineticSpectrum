@@ -1,0 +1,32 @@
+
+#kui-menu-tab-container {
+    width: calc(100% - 20px);
+    float: left;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-tab {
+    height: 100%;
+}
+
+.menu-tab-header {
+    height: 25px;
+    background-color: #1d1d1d;
+    border-bottom: 1px solid #262626;
+    text-align: center;
+    color: #d3d3d3;
+}
+
+.menu-tab-title {
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+}
+
+.menu-tab-header:hover {
+    cursor: pointer;
+    background-color: #232323;
+   /* color: #7092d8;*/
+}

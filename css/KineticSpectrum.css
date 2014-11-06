@@ -1,0 +1,111 @@
+﻿/*
+*@Author: Jacqui Manzi
+*Novemeber 22nd, 2013
+*jacqui@revkitt.com
+*
+* KineticSpectrum.js - Main css for all non-dojo css classes.
+*/
+body {
+
+    font-family: 'Lato', sans-serif;
+    background-color:black;
+    height:100%;
+    width:100%;
+    padding:0;
+    border:0;
+    margin:0;
+    font-size: smaller;
+    font-weight: normal;
+}
+
+
+#kui-layout {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+#main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.arrowButton, .fullScreenButton{
+    background-color: rgb(45, 45, 45);
+}
+
+.arrowButton:hover, .fullScreenButton:hover{
+    cursor: pointer;
+    background-color: #232323;
+}
+
+.fullScreenButton {
+
+    background-image: url("../js/app/kui/images/fullscreen.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    height: 3%;
+    width: 100%;
+}
+
+.modeItem {
+
+    width: 50%;
+    height:100%;
+    background-color:#8e0100;
+    color:#e0e0e0;
+    font-size: 1.2em;
+    display: table-cell;
+    vertical-align: middle;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modeItem:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.allLeds, .allVertices {
+
+    width:50px;
+    height:50px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 100px 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.allLeds {
+
+    background-image:url('../js/app/kui/images/ledSprite.png');
+}
+
+.allLeds:hover, .allVertices:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.allVertices {
+    background-image: url('../js/app/kui/images/selectVertex.png');
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ 
+  
+ 

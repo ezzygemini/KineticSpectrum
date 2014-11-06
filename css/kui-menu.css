@@ -1,0 +1,82 @@
+#kui-menu {
+
+    position: absolute;
+    top: 10%;
+    width: 20%;
+    height: 80%;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+
+    scrollbar-face-color: #367CD2;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-track-color: #FFFFFF;
+    scrollbar-arrow-color: #FFFFFF;
+}
+
+#kui-menu::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+#kui-menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: rgba(57, 57, 57, 0.9);
+}
+
+/* Handle */
+#kui-menu::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+#kui-menu-bar {
+    height: 100%;
+    width: 20px;
+    float: right;
+    position: relative;
+    background-color: #262626;
+}
+
+#kui-menu-bar-list {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: list-item;
+    padding: 0;
+    margin: 0;
+}
+
+.kui-menu-bar-options {
+    color: #bebebe;
+    width: 100%;
+    text-align: center;
+}
+
+#kui-menu-expand {
+    height: 25px;
+    position: relative;
+}
+
+.expand-icon {
+    margin-top: 7px;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 1px;
+}
+
+#kui-menu-toggle {
+    border-top: 1px solid #444444;
+    height: calc(100% - 25px);
+    min-height: 50px;
+}
+
+#kui-menu-expand:hover, #kui-menu-toggle:hover {
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
