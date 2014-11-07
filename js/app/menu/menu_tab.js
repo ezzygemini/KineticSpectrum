@@ -2,30 +2,37 @@
 /** @jsx React.DOM */
 define(['react'], function(React) {
 
+  /**
+   *
+   */
   return React.createClass({
 
     getDefaultProps : function() {
       return {
-        "title" : "menu option"
+        'title' : 'menu option',
+        'default' : false
       };
     },
     getInitialState: function () {
-      return {active: false};
+      var active = this.props.item.default || false;
+      return {active: active};
     },
     handleClick: function () {
-      this.setState({active: !this.state.active});
+      if (this.isMounted()) {
+        console.log("Click Received State Before: " + this.state.active);
+        this.setState({active: !this.state.active});
+        console.log("Click Received State After: " + this.state.active);
+      }
     },
     render: function () {
-      var iconClass = this.state.active ? 'active menu-tab' : 'in-active menu-tab';
-      var items = this.props.items.map(function(item) {
-        return <li className={iconClass} onClick={this.handleClick.bind(this, item)}>
-                  <div className='menu-tab-header'>
-                    <span className='menu-tab-title no-select'>{item.title}</span>
-                  </div>
-               </li>;
-      }.bind(this));
+      $('.menu-tab').removeClass('active');
+      var iconClass = this.state.active ? 'active menu-tab' : 'menu-tab';
       return (
-        <div>{items}</div>
+        <li className={iconClass} onClick={this.handleClick}>
+          <div className='menu-tab-header'>
+            <span className='menu-tab-title no-select'>{this.props.item.title}</span>
+          </div>
+        </li>
         );
     }
   });

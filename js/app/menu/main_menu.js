@@ -2,21 +2,31 @@
 /** @jsx React.DOM */
 define(['react', 'jquery', 'jsx!app/menu/menu_tab'], function(React, $, MenuTab) {
 
+  /**
+   *
+   */
   var Menu = React.createClass({
     render: function () {
-
+      /**/
       var tabs = [
-        {title: 'LED'},
-        {title: 'Pattern'},
-        {title: 'Pattern Composer'},
-        {title: 'Generative'},
-        {title: 'Effect'},
-        {title: 'File'}
+        {title: 'LED', default: true},
+        {title: 'Pattern', default: false},
+        {title: 'Pattern Composer', default: false},
+        {title: 'Generative', default: false},
+        {title: 'Effect', default: false},
+        {title: 'File', default: false}
       ];
+
+      var menuTabs = [];
+      for(var i = 0; i < tabs.length; i++){
+        tabs[i].id = i;
+        menuTabs.push(<MenuTab item={tabs[i]}/>)
+      }
+
       return (
         <div id='kui-menu'>
           <ol id='kui-menu-tab-container'>
-            <MenuTab items={tabs}/>
+          {menuTabs}
           </ol>
           <div id='kui-menu-bar'></div>
         </div>
@@ -24,11 +34,17 @@ define(['react', 'jquery', 'jsx!app/menu/menu_tab'], function(React, $, MenuTab)
     }
   });
 
+  /**
+   *
+   */
   React.renderComponent(
     <Menu />,
     document.getElementById('kui-layout')
   );
 
+  /**
+   *
+   */
   var MenuToggle = React.createClass({
 
     getInitialState: function () {
@@ -62,6 +78,9 @@ define(['react', 'jquery', 'jsx!app/menu/menu_tab'], function(React, $, MenuTab)
     }
   });
 
+  /**
+   *
+   */
   React.renderComponent(
     <MenuToggle/>,
     document.getElementById('kui-menu-bar')
