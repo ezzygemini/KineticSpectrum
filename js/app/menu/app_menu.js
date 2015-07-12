@@ -29,7 +29,6 @@ define(['react', 'jquery', 'jsx!app/menu/app_menu_tab'], function(React, $, Menu
           <div id='app-menu-bar'></div>
         </div>
         );
-    }
   });
 
   /**
