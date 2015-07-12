@@ -1,0 +1,39 @@
+
+#app-menu {
+   height: 100%;
+}
+
+
+#app-menu-tab-container {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.app-menu-tab.active {
+
+}
+
+.app-menu-tab {
+    height: 33%;
+}
+
+.app-menu-tab-header {
+    height: 100%;
+    text-align: center;
+    color: #d3d3d3;
+    border: 1px solid #303030;
+}
+
+.app-menu-tab-title {
+    position: relative;
+    top: 47%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2em;
+}
+
+.app-menu-tab-header:hover {
+    cursor: pointer;
+    background-color: #232323;
+}
