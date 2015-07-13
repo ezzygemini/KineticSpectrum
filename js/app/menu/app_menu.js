@@ -48,8 +48,8 @@ define(['react', 'jquery', 'reactRouter', 'jsx!app/menu/app_menu_tab'], function
    */
   routes = (
       <Router history={history}>
-          <Route path="users" component={Menu}>
-            <Route path="/user/:userId" component={MenuTab}/>
+          <Route path="menu-items" component={Menu}>
+            <Route path="/menu-item/:item" component={MenuTab}/>
           </Route>
       </Router>
   )
