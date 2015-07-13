@@ -11,6 +11,7 @@ requirejs.config({
     react: "react",
     JSXTransformer: "JSXTransformer",
     jsx: "jsx",
-    jquery: "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min"
+    jquery: "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min",
+    reactRouter: "ReactRouter.min"
   }
 });

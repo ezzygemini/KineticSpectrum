@@ -1,7 +1,6 @@
 
 /** @jsx React.DOM */
-define(['react', 'jquery', 'jsx!app/menu/app_menu_tab'], function(React, $, MenuTab) {
-
+define(['react', 'jquery', 'reactRouter', 'jsx!app/menu/app_menu_tab'], function(React, $, ReactRouter, MenuTab) {
 
   /**
    *
@@ -15,8 +14,9 @@ define(['react', 'jquery', 'jsx!app/menu/app_menu_tab'], function(React, $, Menu
         {title: 'Swipe', default: false, url: 'swipe.html'}
       ];
 
-      var menuTabs = [];
-      for(var i = 0; i < tabs.length; i++){
+      var menuTabs = [],
+          i;
+      for (i = 0; i < tabs.length; i++) {
         tabs[i].id = i;
         menuTabs.push(<MenuTab item={tabs[i]}/>)
       }
@@ -39,6 +39,20 @@ define(['react', 'jquery', 'jsx!app/menu/app_menu_tab'], function(React, $, Menu
     <Menu />,
     document.getElementById('kui-layout')
   );
+
+  var Route = ReactRouter.Route;
+  var Router = ReactRouter.Router;
+
+  /**
+   *
+   */
+  routes = (
+      <Router history={history}>
+          <Route path="users" component={Menu}>
+            <Route path="/user/:userId" component={MenuTab}/>
+          </Route>
+      </Router>
+  )
 });
 
 
